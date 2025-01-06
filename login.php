@@ -45,3 +45,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<?php
+
+include "conn.php";
+$conn->select_db("crud12");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $u_username = $_POST['u_username'];
+    $u_password = $_POST['u_password'];
+
+    $select = "SELECT * FROM users WHERE Username = '$u_username'";
+    $result = $conn->query($select);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        if ($u_password === $row['uPassword']) {
+            $_SESSION['sess_id'] = $row['ID'];
+            $_SESSION['sess_username'] = $row['Username'];
+            $_SESSION['sess_firstname'] = $row['First_Name'];
+            $_SESSION['sess_lastname'] = $row['Last_Name'];
+            $_SESSION['sess_age'] = $row['Age'];
+            $_SESSION['sess_email'] = $row['Email'];
+            $_SESSION['sess_password'] = $row['uPassword'];
+
+            header("Location: 6/index.php");
+        } else {
+            echo "Password Doesn't Match. Try Again!";
+        }
+    } else {
+        echo "User Not Found";
+    }
+}
