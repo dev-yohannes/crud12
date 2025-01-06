@@ -12,15 +12,20 @@
             backdrop-filter: blur(10px);
             border-radius: 10px;
             padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .bg-darker {
             background-color: #e0e0e0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
         }
     </style>
 </head>
 <body class="bg-darker">
     <div class="container mt-5">
-        <div class="glassmorphism">
+        <div class="glassmorphism form-container">
             <h1 class="text-center mb-4">Registration</h1>
             <form method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
