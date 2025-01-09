@@ -80,7 +80,7 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="../logout.php">Logout</a></li>
-            <li><a href="profile.php"><?php echo $username; ?></a></li>
+            <li><a href="../profile.php"><?php echo $username; ?></a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
