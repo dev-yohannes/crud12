@@ -79,3 +79,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<?php
+
+include "conn.php";
+$conn->select_db("crud12");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $u_username = $_POST['u_username'];
+    $u_firstname = $_POST['u_firstname'];
+    $u_lastname = $_POST['u_lastname'];
+    $u_age = $_POST['u_age'];
+    $u_email = $_POST['u_email'];
+    $u_password = $_POST['u_password'];
+    $confirm_password = $_POST['confirm_password'];
+
+    if ($u_password !== $confirm_password) {
+        die("Password Doesn't Match. Try Again!");
+    }
+
+    $insertData = "INSERT INTO users (Username, First_Name, Last_Name, Age, Email, uPassword) 
+    VALUES ('$u_username', '$u_firstname', '$u_lastname', '$u_age', '$u_email', '$u_password')";
+
+    if ($conn->query($insertData) === TRUE) {
+        echo "Data Inserted Successfully";
+
+        header("Location: login.php");
+    } else {
+        echo "Error When Inserting Data: " . $conn->error;
+    }
+}
+
+?>
