@@ -6,26 +6,22 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
+        .custom-form-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #f5f9ff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .bg-custom {
-            background-color: #f5f9ff;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: auto;
+            background-color: #f8f9fa;
         }
     </style>
 </head>
 <body class="bg-custom">
     <div class="container mt-5">
-        <div class="glassmorphism form-container">
+        <div class="custom-form-container">
             <h1 class="text-center mb-4">Login</h1>
             <form method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
@@ -40,9 +36,9 @@
                     <button type="submit" class="btn btn-primary">Login</button>
                 </div>
                 <div class="text-center mt-3">
-                    <h5 class="text-muted">
+                    <h6 class="text-muted">
                         Don't have an account? <a href="reg.php" class="text-primary fw-bold">Register here</a>
-                    </h5>
+                    </h6>
                 </div>
             </form>
         </div>
