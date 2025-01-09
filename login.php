@@ -53,6 +53,7 @@
 
 
 <?php
+session_start();
 
 include "conn.php";
 $conn->select_db("crud12");
