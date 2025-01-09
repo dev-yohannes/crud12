@@ -6,37 +6,22 @@
     <title>Registration</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
+        .custom-form-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #f5f9ff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .bg-custom {
-            background-color: #f5f9ff;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: auto;
-        }
-        .login-link {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .login-link h5 {
-            color: #6c757d;
-        }
-        .login-link a {
-            color: #007bff;
-            font-weight: bold;
+            background-color: #f8f9fa;
         }
     </style>
 </head>
 <body class="bg-custom">
     <div class="container mt-5">
-        <div class="glassmorphism form-container">
+        <div class="custom-form-container">
             <h1 class="text-center mb-4">Registration</h1>
             <form method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
@@ -70,8 +55,11 @@
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Register</button>
                 </div>
-                <div class="login-link">
-                    <h5>Already have an account? <a href="login.php">Login here</a></h5>
+                <div class="text-center mt-4">
+                    <h6 class="text-secondary">
+                        Already have an account? 
+                        <a href="login.php" class="text-primary fw-bold">Login here</a>
+                    </h6>
                 </div>
             </form>
         </div>
