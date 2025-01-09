@@ -37,6 +37,14 @@
 </head>
 
 <body class="index-page">
+  <?php
+  session_start();
+
+  if (isset($_SESSION['sess_id'])) {
+    $username = $_SESSION['sess_username'];
+  }
+
+  ?>
 
   <header id="header" class="header sticky-top">
 
@@ -72,7 +80,7 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="../logout.php">Logout</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="profile.php"><?php echo $username; ?></a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
