@@ -65,7 +65,8 @@
             </div>
             <div class="text-center mt-4">
                 <a href="editProfile.php" class="btn btn-primary">Edit Profile</a>
-                <a href="logout.php" class="btn btn-danger">Logout</a>
+                <a href="logout.php" class="btn btn-warning">Logout</a>
+                <a href="delete.php" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
